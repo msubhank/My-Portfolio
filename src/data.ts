@@ -48,7 +48,7 @@ export const projects: Project[] = [
     ],
     technologies: ['React.js', 'Node.js', 'Express.js', 'PostgreSQL', 'Supabase', 'Judge0 API', 'Monaco Editor', 'Tailwind CSS'],
     category: 'fullstack',
-    codeUrl: 'https://github.com/msubhank',
+    codeUrl: 'https://github.com/msubhank/Evalify',
     featured: true
   },
   {
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     ],
     technologies: ['Next.js', 'REST APIs', 'Tailwind CSS', 'Geolocation API', 'Local Storage'],
     category: 'frontend',
-    liveUrl: 'https://github.com/msubhank', // placeholder link or custom representation
+    liveUrl: 'https://thesalahtime.com/',
     featured: true
   },
   {
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     ],
     technologies: ['React.js', 'Tailwind CSS', 'JavaScript', 'Framer Motion'],
     category: 'frontend',
-    liveUrl: 'https://github.com/msubhank',
+    liveUrl: 'https://bytesfort.com/',
     featured: true
   },
   {
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     ],
     technologies: ['JavaScript', 'REST API', 'Tailwind CSS', 'HTML5', 'CSS3'],
     category: 'frontend',
-    codeUrl: 'https://github.com/msubhank',
+    codeUrl: 'https://github.com/msubhank/Get-Weather-App',
     featured: false
   }
 ];
