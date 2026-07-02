@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base style resets and customizations */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0A0A0A; /* Deep bold black */
+  color: #FFFFFF; /* High-contrast white */
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+/* Typography styles */
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+  color: transparent;
+}
+
+.text-stroke:hover {
+  color: #FFFFFF;
+  -webkit-text-stroke: 1px transparent;
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(135deg, #FFFFFF, #A3A3A3); /* High-contrast metallic silver */
+}
+
