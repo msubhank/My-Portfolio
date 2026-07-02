@@ -125,9 +125,10 @@ export default function Projects() {
             ))}
           </AnimatePresence>
         </motion.div>
+      </div>
 
-        {/* Detailed deep-dive Modal */}
-        <AnimatePresence>
+      {/* Detailed deep-dive Modal */}
+      <AnimatePresence>
           {selectedProject && (
             <div
               id="project-detail-modal"
@@ -228,8 +229,6 @@ export default function Projects() {
             </div>
           )}
         </AnimatePresence>
-
-      </div>
-    </section>
+      </section>
   );
 }
