@@ -14,13 +14,13 @@ export default function Hero({ onOpenResume }: HeroProps) {
     >
       {/* Background elegant grid pattern with zero colored glow nodes */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)] bg-[size:5rem_5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_60%,transparent_100%)] opacity-20" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Main Hero Intro Text - spans 7 columns */}
           <div className="lg:col-span-7 flex flex-col items-start text-left space-y-8">
-            
+
             {/* Tagline Badge */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
@@ -31,7 +31,7 @@ export default function Hero({ onOpenResume }: HeroProps) {
               <Sparkles className="w-3.5 h-3.5 opacity-70" />
               SOFTWARE ENGINEERING GRADUATE
             </motion.div>
- 
+
             {/* Main Greeting and Name */}
             <div className="space-y-4">
               <motion.span
@@ -42,7 +42,7 @@ export default function Hero({ onOpenResume }: HeroProps) {
               >
                 HI, MY NAME IS
               </motion.span>
-              
+
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -226,7 +226,7 @@ export default function Hero({ onOpenResume }: HeroProps) {
                 </div>
                 <div className="pl-4">
                   <span className="text-neutral-400">passionateAbout:</span>{' '}
-                  <span className="text-white">'UI/UX and API Security'</span>
+                  <span className="text-white">'Building Scalable Web Applications'</span>
                 </div>
                 <div>
                   <span className="text-neutral-500">{'};'}</span>
@@ -255,7 +255,7 @@ export default function Hero({ onOpenResume }: HeroProps) {
                   <span className="text-neutral-500">{'}'}</span>
                 </div>
               </div>
-              
+
               {/* Run Terminal Bar */}
               <div className="bg-[#181818] px-4 py-2 border-t border-white/10 flex items-center justify-between text-[10px] font-mono text-neutral-500">
                 <span>STATUS: ACTIVE</span>
