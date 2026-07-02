@@ -79,7 +79,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Quick Social Deck
+          Quick Social Deck
           <div className="bg-[#121212] border border-white/10 rounded-none p-6 sm:p-8 space-y-6 flex flex-col justify-between">
             <div className="space-y-4">
               <h3 className="font-display font-bold text-lg text-white uppercase tracking-tight">
@@ -112,7 +112,7 @@ export default function Contact() {
                 GITHUB PROFILE
               </a>
             </div>
-          </div> */}
+          </div>
 
         </div>
       </div>
