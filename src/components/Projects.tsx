@@ -120,10 +120,7 @@ export default function Projects() {
               >
                 <div className="p-6 space-y-4">
                   {/* Category icon header */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-[9px] font-mono uppercase bg-white/5 border border-white/10 px-2.5 py-1 text-white font-bold tracking-widest">
-                      {project.category === 'fullstack' ? 'Full Stack' : 'Frontend'}
-                    </span>
+                  <div className="flex items-center justify-end">
                     <div className="flex items-center gap-2.5">
                       {project.codeUrl && (
                         <a
@@ -222,9 +219,6 @@ export default function Projects() {
                 {/* Modal Header Bar - Fixed at the top */}
                 <div className="flex items-center justify-between px-6 py-4 bg-[#121212] border-b border-white/10 flex-shrink-0 z-20">
                   <div className="flex items-center gap-3">
-                    <span className="text-[9px] font-mono uppercase bg-white/5 border border-white/10 px-2 py-0.5 text-white font-bold tracking-widest">
-                      {selectedProject.category === 'fullstack' ? 'Full Stack' : 'Frontend'}
-                    </span>
                     <h3 className="font-display font-black text-sm sm:text-base text-white uppercase tracking-tight">
                       {selectedProject.title}
                     </h3>
@@ -356,8 +350,8 @@ export default function Projects() {
                               onClick={runSandboxCode}
                               disabled={isRunningCode}
                               className={`w-full flex items-center justify-center gap-2 py-2.5 text-[10px] tracking-widest uppercase font-black transition-all ${isRunningCode
-                                  ? 'bg-neutral-800 text-neutral-500 cursor-not-allowed'
-                                  : 'bg-white text-black hover:bg-neutral-200'
+                                ? 'bg-neutral-800 text-neutral-500 cursor-not-allowed'
+                                : 'bg-white text-black hover:bg-neutral-200'
                                 }`}
                             >
                               <Play className="w-3.5 h-3.5" />
