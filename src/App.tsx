@@ -45,7 +45,7 @@ export default function App() {
       />
 
       {/* Main sections block */}
-      <main className="relative z-10">
+      <main className="relative">
         <Hero onOpenResume={() => setIsResumeOpen(true)} />
         <About />
         <Skills />
