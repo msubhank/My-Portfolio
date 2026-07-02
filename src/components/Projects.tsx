@@ -5,7 +5,6 @@ import { projects } from '../data';
 import { Project } from '../types';
 
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState<'all' | 'fullstack' | 'frontend'>('all');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   // States for Interactive Demos inside the Modal
@@ -84,45 +83,22 @@ export default function Projects() {
     }
   };
 
-  const filteredProjects = activeTab === 'all'
-    ? projects
-    : projects.filter(p => p.category === activeTab);
-
   return (
     <section id="projects" className="py-24 bg-[#0A0A0A] relative border-t border-white/10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Section Heading */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 text-left">
-          <div className="space-y-4">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-white/10 text-white font-mono text-[10px] tracking-[0.25em] uppercase">
-              <FolderGit2 className="w-3.5 h-3.5 opacity-70" />
-              PORTFOLIO
-            </div>
-            <h2 className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-white tracking-tighter uppercase leading-[0.9]">
-              FEATURED<br />PROJECTS
-            </h2>
-            <p className="text-neutral-400 text-xs sm:text-sm uppercase tracking-widest font-bold max-w-xl">
-              A comprehensive showcase of web apps, custom platforms, and production pipelines.
-            </p>
+        <div className="mb-12 text-left space-y-4">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-white/10 text-white font-mono text-[10px] tracking-[0.25em] uppercase">
+            <FolderGit2 className="w-3.5 h-3.5 opacity-70" />
+            PORTFOLIO
           </div>
-
-          {/* Tab Filter Button Row */}
-          <div className="flex justify-start gap-1 p-1 bg-[#121212] border border-white/10 rounded-none self-start">
-            {(['all', 'fullstack', 'frontend'] as const).map((tab) => (
-              <button
-                key={tab}
-                id={`project-filter-${tab}`}
-                onClick={() => setActiveTab(tab)}
-                className={`px-4 py-2 text-[10px] font-mono tracking-widest uppercase font-black transition-all duration-200 ${activeTab === tab
-                    ? 'bg-white text-black'
-                    : 'text-white/50 hover:text-white'
-                  }`}
-              >
-                {tab === 'all' ? 'All Work' : tab === 'fullstack' ? 'Full Stack' : 'Frontend'}
-              </button>
-            ))}
-          </div>
+          <h2 className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-white tracking-tighter uppercase leading-[0.9]">
+            FEATURED<br />PROJECTS
+          </h2>
+          <p className="text-neutral-400 text-xs sm:text-sm uppercase tracking-widest font-bold max-w-xl">
+            A comprehensive showcase of web apps, custom platforms, and production pipelines.
+          </p>
         </div>
 
         {/* Project Cards Grid */}
@@ -131,7 +107,7 @@ export default function Projects() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project: Project) => (
+            {projects.map((project: Project) => (
               <motion.div
                 layout
                 initial={{ opacity: 0, scale: 0.95 }}
